@@ -1,10 +1,32 @@
+body{
+   background-color: #333333 !important;
+
+}
 .App {
   text-align: center;
+  display: flex;
+  flex-flow: column;
+  color: white
 }
+.todo{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: #444444;
+  width: 50%;
+  margin: auto;
+  border-radius: 20px;
+}
+.todo:hover{
+  background-color: #666666;
 
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+.modal-content{
+  background-color: #333333 !important;
+  color: white;
 }
 
 @media (prefers-reduced-motion: no-preference) {
