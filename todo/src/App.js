@@ -16,6 +16,7 @@ function App() {
     <h1 id="title">Your Todos</h1>
     <Todos todos={state} todoClicked={todoClicked} setTodoClicked={setTodoClicked} dispatch={dispatch}/>
     <AddTodo modal={modal} setModal={setModal} state={state} dispatch={dispatch} newTodo={newTodo} setNewTodo={setNewTodo}/>
+
     </div>
   );
 }
