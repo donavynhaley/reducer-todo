@@ -30,10 +30,24 @@ export const initialState = [
 // reducer function
 export const todoReducer = (state, action) => {
   switch (action.type) {
-    case 'COMPLETED':
+    case 'CHECKED':
+    state.map((item)=>{
+      if(item.id == action.id){
+        item.completed = !item.completed
+        console.log(item)
+      }
+    })
       return state
+      break;
     case 'NEW_TODO':
       return [...state, {item: action.payload, completed: false, id: new Date()}]
+      break;
+    case 'CLEAR_COMPLETED':
+      const newState = state.filter((item)=>{
+        return item.completed == false;
+      })
+      return newState
+      break;
     default:
       return state
     }

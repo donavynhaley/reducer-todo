@@ -13,12 +13,16 @@ const addTodoForm = (props) => {
   return (
     <div>
       <Button color="primary" onClick={toggle}>Add todo</Button>
+      <Button color="success" onClick={()=>{
+        dispatch({type: "CLEAR_COMPLETED"})
+      }}>Clear Completed</Button>
+
       <Modal isOpen={modal} toggle={toggle}>
         <ModalHeader toggle={toggle}>Add a new Task</ModalHeader>
         <ModalBody>
         {/* Form would export this to its own fucntion if I had more time*/}
         <div id="formContainer">
-          <Form onSubmit={(event) =>     event.preventDefault()}>
+          <Form onSubmit={(event) => event.preventDefault()}>
             <FormGroup>
               <Input
                 type="text"

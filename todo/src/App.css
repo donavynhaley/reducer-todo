@@ -16,6 +16,14 @@ body{
   margin: auto;
   border-radius: 20px;
 }
+.todo .checked{
+  color: green;
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+.btn{
+  margin: 1%;
+}
 .todo:hover{
   background-color: #666666;
 
